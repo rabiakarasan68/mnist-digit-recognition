@@ -27,7 +27,7 @@ The project also includes an interactive interface where the user can draw a dig
 
 ## 1. Machine Learning Model Comparison
 
-The model_karsilastirma.py file compares several traditional machine learning algorithms.
+The model_comparison.py file compares several traditional machine learning algorithms.
 
 The following models are evaluated:
 
@@ -56,7 +56,7 @@ The program also generates a classification report and a confusion matrix for th
 
 Run the model comparison with:
 
-python model_karsilastirma.py
+python model_comparison.py
 
 An example visualization of the dataset is saved as:
 
@@ -68,7 +68,7 @@ karisiklik_matrisi.png
 
 ## 2. CNN Model
 
-The cnn_egitim.py file trains a Convolutional Neural Network using the MNIST dataset.
+The train_cnn.py file trains a Convolutional Neural Network using the MNIST dataset.
 
 Unlike the Scikit-learn Digits dataset used for model comparison, the MNIST dataset contains:
 
@@ -132,7 +132,7 @@ Cross-entropy loss
 
 To train the CNN model, run:
 
-python cnn_egitim.py
+python train_cnn.py
 
 The program automatically downloads the MNIST dataset if necessary.
 
@@ -224,12 +224,11 @@ cd mnist-digit-recognition
 Install the required libraries:
 
 pip install -r requirements.txt
+
 ## 7. Usage
 Step 1 - Model Comparison
-
 Run:
-
-python model_karsilastirma.py
+python model_comparison.py
 
 This program compares:
 
@@ -243,14 +242,12 @@ and displays their accuracy scores.
 Step 2 - Train the CNN
 
 Run:
-
-python cnn_egitim.py
-
+python train_cnn.py
 The MNIST dataset will be downloaded automatically if it is not already available.
 
 After training, the best model will be saved as:
-
 en_iyi_model.pth
+
 Step 3 - Draw a Digit
 
 After the CNN has been trained, run:
@@ -283,6 +280,7 @@ NumPy
 Matplotlib
 Pillow
 Tkinter
+
 ## 9. Datasets
 
 Two different handwritten digit datasets are used in this project.
@@ -297,7 +295,7 @@ Image size:
 
 Used by:
 
-model_karsilastirma.py
+model_comparison.py
 MNIST Dataset
 
 Used for CNN training and user digit prediction.
@@ -308,7 +306,7 @@ Image size:
 
 Used by:
 
-cnn_egitim.py
+train_cnn.py
 kullanici_tahmin.py
 Dataset Difference
 
@@ -326,6 +324,7 @@ CNN Training
 MNIST Dataset
         ↓
 28 × 28 images
+
 ## 10. Results
 
 The project generates several visual outputs during execution.
@@ -334,18 +333,17 @@ Sample Digits
 
 The model comparison program generates sample handwritten digits:
 
-images/ornek_rakamlar.png
+ornek_rakamlar.png
 Confusion Matrix
 
 The confusion matrix shows which digits are correctly and incorrectly classified:
 
-images/karisiklik_matrisi.png
+karisiklik_matrisi.png
 CNN Predictions
 
 The CNN prediction examples are saved as:
 
 cnn_tahmin_ornekleri.png
-
 
 ## 11. Requirements
 
